@@ -6,11 +6,11 @@
         class="hidden-sm-and-up"
       ></v-app-bar-nav-icon>
 
-      <v-toolbar-title>mesapp</v-toolbar-title>
+      <v-toolbar-title><router-link to="/" class="text-decoration-none title" >mesapp</router-link></v-toolbar-title>
 
       <v-toolbar-items class="ml-5 hidden-sm-and-down">
         <v-btn to="#" plain elevation="0">Generar código QR</v-btn>
-        <v-btn to="#" plain elevation="0">Usuarios</v-btn>
+        <v-btn to="/users" plain elevation="0">Usuarios</v-btn>
         <v-btn to="#" plain elevation="0">Menú</v-btn>
       </v-toolbar-items>
 
@@ -33,7 +33,8 @@
           </v-list-item>
 
           <v-list-item>
-            <v-list-item-title>Usuarios</v-list-item-title>
+            <v-list-item-title><router-link to="/users" class="link"
+                >Usuarios</router-link></v-list-item-title>
           </v-list-item>
 
           <v-list-item>
@@ -61,5 +62,12 @@ export default {
 .v-btn.v-size--default{
     text-transform: initial !important;
     font-weight: 300;
+}
+.title{
+  color: white;
+}
+.link{
+  color: black;
+
 }
 </style>

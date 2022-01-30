@@ -1,8 +1,8 @@
 <template>
   <v-footer app dark>
-    <v-contaier>
+    <v-container>
       <p class="mt-2">Grupo 1: Sergio Ávila - Lina Vallejo - Josefa Méndez</p>
-    </v-contaier>
+    </v-container>
   </v-footer>
 </template>
 

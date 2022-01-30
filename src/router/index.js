@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+// import { observador } from '../firebase/auth.js'
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,10 @@ const routes = [
     path: '/menu',
     name: 'Menu',
     component: () => import('../views/Menu.vue')
+  },
+  {
+    path: '/users',
+    component: () => import('../views/Users.vue')
   }
 ]
 
@@ -30,5 +35,11 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+
+
+//Usar el observador cuando se tenga el login y logout creados
+// router.beforeEach((to, from, next) => {
+//   observador(to, next);
+// });
 
 export default router
